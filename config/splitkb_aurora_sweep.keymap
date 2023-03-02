@@ -67,7 +67,7 @@
 		&kp Q       &kp W       &kp F       &kp P &kp B 	&kp J   &kp L       &kp U       &kp Y       &kp SEMI 
 		&mt LCTL A  &mt LALT R  &mt LGUI S  &kp T &kp G 	&kp M   &mt LSFT N  &mt LGUI E  &mt LALT I  &mt LCTL O
 		&mt LSFT Z  &kp X       &kp C       &kp D &kp V		&kp K   &kp H       &kp CMMA    &kp DOT     &mt LSFT FSLH
-          				                    &mo 1 &kp SPC   &kp RET &mo 2 
+          				                    &lt 1 TAB &kp SPC   &kp RET &lt 2 BKSP 
 		>;
 		};
 
