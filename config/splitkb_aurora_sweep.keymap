@@ -11,7 +11,7 @@
 
 &mt {
    flavor = "tap-preferred";
-   tapping_term_ms = <200>;
+   tapping_term_ms = <300>;
 };
 
 / { 
@@ -73,16 +73,16 @@
 
        		left_layer {
 		bindings = <
-		&kp N7    &kp N8    &kp N9    &kp N0      &trans		        &trans      &trans      &trans     &trans   &trans 
+		&kp N7    &kp N8    &kp N9    &kp N0      &trans		        &LS(LG(N4))      &trans      &trans     &trans   &trans 
 		&kp N4    &kp N5    &kp N6    &kp MINUS   &trans	            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT &kp SQT 
-		&kp N1    &kp N2 	&kp N3    &kp DOT     &trans 	            &trans   &kp GRAVE   &kp LBKT    &kp RBKT  &kp DQT 
+		&kp N1    &kp N2 	&kp N3    &kp DOT     &kp TILDE 	        &trans   &kp GRAVE   &kp LBKT    &kp RBKT  &kp DQT 
 					                  &kp LGUI    &mo 1         		&mo 3   &kp RGUI    
 		>;
 		};
 		
 		right_layer {
 		bindings = <
-		&kp AMPS  &kp KMLT      &kp PIPE    &kp LPRN    &kp RPRN    	&kp CRRT    &kp AMPS      &kp KMLT  &kp LPRN   &kp RPRN 
+		&kp AMPS  &kp KMLT      &kp PIPE    &kp LPRN    &kp RPRN    	&trans      &trans      &trans     &trans   &trans 
 		&kp DLLR  &kp PRCT      &kp CRRT    &kp LBRC    &kp RBRC 		&kp MINUS   &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
 		&kp BANG  &kp ATSN      &kp HASH    &kp LBKT    &kp RBKT    	&kp UNDER   &kp LEFT      &kp DOWN  &kp UP     &kp RIGHT
 					                        &mo 3       &kp SPC  		&kp RET     &mo 2 
