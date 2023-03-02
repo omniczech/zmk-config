@@ -64,18 +64,18 @@
                 
        		default_layer {
 		bindings = <
-		&kp Q       &kp W       &kp F       &kp P &kp B 	&kp J   &kp L       &kp U       &kp Y       &kp SEMI 
-		&mt LCTL A  &mt LALT R  &mt LGUI S  &kp T &kp G 	&kp M   &mt LSFT N  &mt LGUI E  &mt LALT I  &mt LCTL O
-		&mt LSFT Z  &kp X       &kp C       &kp D &kp V		&kp K   &kp H       &kp CMMA    &kp DOT     &mt LSFT FSLH
-          				                    &lt 1 TAB &kp SPC   &kp RET &lt 2 BKSP 
+		&kp Q       &kp W       &kp F       &kp P       &kp B 	    &kp J   &kp L       &kp U       &kp Y       &kp SEMI 
+		&mt LCTL A  &mt LALT R  &mt LGUI S  &mt LSFT T  &kp G 	    &kp M   &mt LSFT N  &mt LGUI E  &mt LALT I  &mt LCTL O
+		&mt LSFT Z  &kp X       &kp C       &kp D       &kp V		&kp K   &kp H       &kp CMMA    &kp DOT     &mt LSFT FSLH
+          				                    &kp TAB   &lt 1 SPC     &lt 2 RET &kp BKSP 
 		>;
 		};
 
        		left_layer {
 		bindings = <
-		&kp N1     &kp N2       &kp N3      &kp N4      &kp N5		    &kp N6      &kp N7      &kp N8      &kp N9  &kp N0 
-		&kp TAB    &kp LC(S)    &kp DQT     &kp PIPE2   &kp HASH 		&kp MINUS   &kp EQL     &kp LBKT    &kp RBKT  &kp DEL 
-		&kp ESC    &kp TILDE 	&kp BSLH    &kp HASH    &kp TILDE2 	    &kp MINUS   &kp GRAVE   &kp LBKT    &kp RBKT  &kp DEL 
+		&kp N7    &kp N8    &kp N9    &kp N0      &trans		    &kp N6      &kp N7      &kp N8      &kp N9  &kp N0 
+		&kp N4    &kp N5    &kp N6    &kp MINUS   &trans	&kp MINUS   &kp EQL     &kp LBKT    &kp RBKT  &kp SQT 
+		&kp N1    &kp N2 	&kp N3    &kp DOT     &trans 	    &kp MINUS   &kp GRAVE   &kp LBKT    &kp RBKT  &kp DQT 
 					                        &mo 1       &kp LGUI  		&kp RGUI    &mo 2 
 		>;
 		};
