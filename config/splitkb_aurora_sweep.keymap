@@ -30,31 +30,6 @@
             bindings = <&kp TAB>;
         };
         
-            combo_ralt {
-            timeout-ms = <50>;
-            key-positions = <17 16>;
-            bindings = <&kp RALT>;
-        };
-        
-                    combo_lalt {
-            timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp LALT>;
-        };
-        
-                           combo_lgui {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LGUI>;
-        };
-        
-        
-       combo_rgui {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp RGUI>;
-        };
-        
 
         
     };
@@ -73,27 +48,27 @@
 
        		left_layer {
 		bindings = <
-		&kp N7    &kp N8    &kp N9    &kp N0      &trans		        &kp LS(LG(N4))      &trans      &trans     &trans   &trans 
-		&kp N4    &kp N5    &kp N6    &kp MINUS   &trans	            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT &kp SQT 
-		&kp N1    &kp N2 	&kp N3    &kp DOT     &kp GRAVE 	        &trans   &kp GRAVE   &kp LBKT    &kp RBKT  &kp DQT 
-					                  &kp LGUI    &mo 1         		&mo 3   &kp RGUI    
+		&kp N7    &kp N8    &kp N9    &kp N0      &kp PLUS		        &kp LS(LG(N4))  &trans      &trans     &trans    &trans 
+		&kp N4    &kp N5    &kp N6    &kp MINUS   &kp EQUAL	            &kp LEFT        &kp DOWN    &kp UP     &kp RIGHT &kp SQT 
+		&kp N1    &kp N2 	&kp N3    &kp DOT     &kp GRAVE 	        &kp HOME        &kp PG_DN   &kp PG_UP  &kp END   &kp DQT 
+					                  &kp LGUI    &mo 1         		&mo 3           &kp DEL    
 		>;
 		};
 		
 		right_layer {
 		bindings = <
-		&kp AMPS  &kp KMLT      &kp PIPE    &kp LPRN    &kp RPRN    	&trans      &trans      &trans     &trans     &trans 
-		&kp DLLR  &kp PRCT      &kp CRRT    &kp LBRC    &kp RBRC 		&kp MINUS   &kp EQUAL   &kp LBRC   &kp RBRC   &kp BKSP
-		&kp BANG  &kp ATSN      &kp HASH    &kp LBKT    &kp RBKT    	&kp UNDER   &kp PLUS    &kp DOWN   &kp UP     &kp RIGHT
-					                        &mo 3       &kp SPC  		&kp RET     &mo 2 
+		&kp AMPS  &kp KMLT      &kp PIPE    &kp LPRN    &kp RPRN    	&trans      &trans    &trans     &trans     &trans 
+		&kp DLLR  &kp PRCT      &kp CRRT    &kp LBKT    &kp RBKT 		&kp MINUS   &trans    &kp LBRC   &kp RBRC   &kp BKSP
+		&kp BANG  &kp ATSN      &kp HASH    &kp LBRC    &kp RBRC    	&kp UNDER   &trans    &trans     &trans     &trans
+					                        &kp LGUI    &mo 3  		    &mo 3       &kp RGUI 
 		>;
 		};	
 		
 		tri_layer {
 		bindings = <
-		&kp N1      &kp N2      &kp N3      &kp N4      &kp N5 		    &trans   &trans     &trans        &trans      &trans
-		&kp F1      &kp F2      &kp F3      &kp F4      &kp F5  		&trans   &kp PG_UP  &kp K_VOL_UP  &kp K_MUTE  &trans 
-		&bt BT_CLR  &bt BT_NXT  &bt BT_PRV  &kp F6      &kp F7   		&trans   &kp PG_DN  &kp K_VOL_DN  &trans      &trans   
+		&kp F1      &kp F2      &kp F3      &kp F4      &kp F5 		    &trans   &trans     &trans        &trans      &trans
+		&kp F6      &kp F7      &kp F8      &kp F9      &kp F10  		&trans   &kp PG_UP  &kp K_VOL_UP  &kp K_MUTE  &trans 
+		&bt BT_CLR  &bt BT_NXT  &bt BT_PRV  &kp F11     &kp F12   		&trans   &kp PG_DN  &kp K_VOL_DN  &trans      &trans   
 					                        &trans      &trans  		&trans   &trans 
 		>;
 		};	
