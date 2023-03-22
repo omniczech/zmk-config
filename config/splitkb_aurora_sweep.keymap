@@ -57,7 +57,7 @@
 		
 		right_layer {
 		bindings = <
-		&kp AMPS  &kp KMLT      &kp PIPE    &kp LPRN    &kp RPRN    	&trans      &trans    &trans     &trans     &trans 
+		&kp AMPS  &kp KMLT      &kp BSLH    &kp LPRN    &kp RPRN    	&trans      &trans    &trans     &trans     &trans 
 		&kp DLLR  &kp PRCT      &kp CRRT    &kp LBKT    &kp RBKT 		&kp MINUS   &trans    &kp LBRC   &kp RBRC   &kp BKSP
 		&kp BANG  &kp ATSN      &kp HASH    &kp LBRC    &kp RBRC    	&kp UNDER   &trans    &trans     &trans     &trans
 					                        &kp LGUI    &mo 3  		    &mo 3       &kp RGUI 
