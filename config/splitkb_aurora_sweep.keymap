@@ -7,11 +7,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
+#include <dt-bindings/zmk/mouse.h>
 
 &mt {
    flavor = "tap-preferred";
-   tapping_term_ms = <300>;
+   tapping_term_ms = <275>;
 };
 
 / { 
@@ -22,12 +22,6 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
-        };
-        
-         combo_tab {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp TAB>;
         };
         
 
@@ -58,9 +52,9 @@
 		right_layer {
 		bindings = <
 		&kp AMPS  &kp KMLT      &kp BSLH    &kp LPRN    &kp RPRN    	&trans      &trans    &trans     &trans     &trans 
-		&kp DLLR  &kp PRCT      &kp CRRT    &kp LBKT    &kp RBKT 		&kp MINUS   &trans    &kp LBRC   &kp RBRC   &kp BKSP
-		&kp BANG  &kp ATSN      &kp HASH    &kp LBRC    &kp RBRC    	&kp UNDER   &trans    &trans     &trans     &trans
-					                        &kp LGUI    &mo 3  		    &mo 3       &kp RGUI 
+		&kp DLLR  &kp PRCT      &kp CRRT    &kp LBKT    &kp RBKT 		&mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT   &kp BKSP
+		&kp BANG  &kp ATSN      &kp HASH    &kp LBRC    &kp RBRC    	&mwh SCROLL_LEFT &mwh SCROLL_DOWN  &mwh SCROLL_UP     &mwh SCROLL_RIGHT     &trans
+					                        &mkp LCLK   &mkp RCLK  		    &mo 3       &kp RGUI 
 		>;
 		};	
 		
