@@ -19,38 +19,12 @@
 #define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
 #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
 
-&mmv {
-	time-to-max-speed-ms = <400>;             /* <--- How long time until max speed is reached (default: 500) */
-    acceleration-exponent=<2>;
-};
-
 &mt {
-	quick_tap_ms = <200>;
-    flavor = "tap-preferred";
-    tapping_term_ms = <275>;
+   flavor = "tap-preferred";
+   tapping_term_ms = <275>;
 };
 
 / { 
-	behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-	td: tapdance {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAPDANCE";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
 
     combos {
         compatible = "zmk,combos";
@@ -69,46 +43,38 @@
                 
        		default_layer {
 		bindings = <
-		&td ESC Q   &kp W       &kp F       	&kp P       &kp B 	    		&kp J   		&kp L       &kp U       &kp Y       &kp SEMI 
-		&mt LCTL A  &mt LALT R  &mt LGUI S  	&mt LSFT T  &kp G 	    		&kp M   		&mt LSFT N  &mt LGUI E  &mt LALT I  &mt LCTL O
-		&mt LSFT Z  &kp X       &kp C       	&kp D       &kp V				&kp K   		&kp H       &kp CMMA    &kp DOT     &mt LSFT FSLH
-          				                    	&sk LSHIFT &mt LC(LS(LALT)) SPC     		&mt RCTRL ENTER &to 1
+		&kp Q       &kp W       &kp F       &kp P       &kp B 	    &kp J   &kp L       &kp U       &kp Y       &kp SEMI 
+		&mt LCTL A  &mt LALT R  &mt LGUI S  &mt LSFT T  &kp G 	    &kp M   &mt LSFT N  &mt LGUI E  &mt LALT I  &mt LCTL O
+		&mt LSFT Z  &kp X       &kp C       &kp D       &kp V		&kp K   &kp H       &kp CMMA    &kp DOT     &mt LSFT FSLH
+          				                    &lt 2 TAB   &lt 1 SPC     &lt 2 RET &lt 1 BKSP 
 		>;
 		};
 
-       	left_layer {
-			bindings = <
-			&kp ESC  	&kp ATSN    &td LC(LG(LS(N4))) HASH 	&kp DLLR    &kp PRCNT		&kp CARET &kp LS(COMMA) &kp LS(DOT) &kp SEMI &kp BKSP 
-			&kp TAB     &kp EQUAL   &kp LA(RBKT)      			&kp LA(LS(RBKT))     &kp SQT 		&kp BSLH &kp LBRC  &kp RBRC &kp PIPE  &kp ENTER
-			&kp TILDE   &kp LA(N3)	&kp LA(LBKT) 				&kp LA(LS(LBKT))  &kp DQT 	&kp LBKT &kp LPRN &kp RPRN &kp RBKT  &to 3 
-																&to 0  &sk LSHIFT  					&sk RALT &to 2 
-			>;
+       		left_layer {
+		bindings = <
+		&kp N7    &kp N8    &kp N9    &kp N0      &kp PLUS		        &kp LS(LG(N4))  &trans      &trans     &trans    &trans 
+		&kp N4    &kp N5    &kp N6    &kp MINUS   &kp EQUAL	            &kp LEFT        &kp DOWN    &kp UP     &kp RIGHT &kp SQT 
+		&kp N1    &kp N2 	&kp N3    &kp DOT     &kp GRAVE 	        &kp HOME        &kp PG_DN   &kp PG_UP  &kp END   &kp DQT 
+					                  &kp LGUI    &mo 1         		&mo 3           &kp DEL    
+		>;
 		};
 		
 		right_layer {
-			bindings = <
-			&kp ESC  &kp C_PP &kp C_PREV  &kp C_NEXT  &kp LS(MINUS)    			&kp MINUS  &kp N7 &kp N8 &kp N9 &trans
-			&kp TAB  &trans   &kp C_VOL_DN  &kp C_VOL_UP  &kp LS(EQUAL) 			&kp EQUAL &kp N4  &kp N5  &kp N6   &kp ENTER
-			&to 4  &kp AMPS &kp SLASH &kp STAR &kp DOT    			&kp N0 &kp N1 &kp N2 &kp N3  &trans 
-						&to 0 &sk LGUI  				&sk RALT  &to 2 
-			>;
-		};
+		bindings = <
+		&kp AMPS  &kp KMLT      &kp BSLH    &kp LPRN    &kp RPRN    	&trans      &trans    &trans     &trans     &trans 
+		&kp DLLR  &kp PRCT      &kp CRRT    &kp LBKT    &kp RBKT 		&mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT   &kp BKSP
+		&kp BANG  &kp ATSN      &kp HASH    &kp LBRC    &kp RBRC    	&mwh SCROLL_LEFT &mwh SCROLL_DOWN  &mwh SCROLL_UP     &mwh SCROLL_RIGHT     &trans
+					                        &mkp LCLK   &mkp RCLK  		&mkp LCLK   &mkp RCLK
+		>;
+		};	
 		
 		tri_layer {
-			bindings = <
-			&trans  &mwh SCROLL_LEFT    &mmv MOVE_UP    &mwh SCROLL_RIGHT    &kp NUM_5 			&kp LG(LBKT)   &kp LC(LS(TAB))   &kp RC(TAB) &kp LG(RBKT) &trans
-			&kp F1 &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp DEL  						&kp LEFT &kp DOWN  &kp UP &kp RIGHT &kp ENTER 
-			&td LG(GRAVE) GRAVE &mkp RCLK  &mwh SCROLL_UP &mwh SCROLL_DOWN &trans   				&mkp LCLK &kp PG_DN  &kp K_VOL_DN  &trans &trans   
-						&to 0 &trans  					&sk RALT &to 1 
-			>;
-		};	
-		bt {
-			bindings = <
-			&trans  &trans &trans &trans &trans &trans &trans &trans &trans &trans 
-			&trans  &trans &trans &trans &trans &trans &trans &trans &trans &trans 
-			&bt BT_PRV  &bt BT_NXT &bt BT_CLR &trans &trans   				&trans &trans  &trans  &trans &trans   
-						&to 0 &trans  					&trans &to 1 
-			>;
+		bindings = <
+		&kp F1      &kp F2      &kp F3      &kp F4      &kp F5 		    &trans   &trans     &trans        &trans      &trans
+		&kp F6      &kp F7      &kp F8      &kp F9      &kp F10  		&trans   &kp PG_UP  &kp K_VOL_UP  &kp K_MUTE  &trans 
+		&bt BT_CLR  &bt BT_NXT  &bt BT_PRV  &kp F11     &kp F12   		&trans   &kp PG_DN  &kp K_VOL_DN  &trans      &trans   
+					                        &trans      &trans  		&trans   &trans 
+		>;
 		};	
         
 	};
