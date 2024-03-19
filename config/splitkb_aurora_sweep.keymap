@@ -42,40 +42,49 @@
                 compatible = "zmk,keymap";
                 
        		default_layer {
-		bindings = <
-		&kp Q       &kp W       &kp F       &kp P       &kp B 	    &kp J   &kp L       &kp U       &kp Y       &kp SEMI 
-		&mt LCTL A  &mt LALT R  &mt LGUI S  &mt LSFT T  &kp G 	    &kp M   &mt LSFT N  &mt LGUI E  &mt LALT I  &mt LCTL O
-		&mt LSFT Z  &kp X       &kp C       &kp D       &kp V		&kp K   &kp H       &kp CMMA    &kp DOT     &mt LSFT FSLH
-          				                    &lt 2 TAB   &lt 1 SPC     &lt 2 RET &lt 1 BKSP 
-		>;
-		};
+				bindings = <
+				&kp Q       &kp W       &kp F       &kp P       &kp B 	      &kp J     &kp L       &kp U       &kp Y       &kp SEMI 
+				&mt LCTL A  &mt LALT R  &mt LGUI S  &mt LSFT T  &kp G 	      &kp M     &mt LSFT N  &mt LGUI E  &mt LALT I  &mt LCTL O
+				&mt LSFT Z  &kp X       &kp C       &kp D       &kp V		  &kp K     &kp H       &kp CMMA    &kp DOT     &mt LSFT FSLH
+													&lt 1 TAB   &lt 2 SPC     &lt 3 RET &lt 4 BKSP 
+				>;
+			};
 
-       		left_layer {
-		bindings = <
-		&kp N7    &kp N8    &kp N9    &kp N0      &kp PLUS		        &kp LS(LG(N4))  &trans      &trans     &trans    &trans 
-		&kp N4    &kp N5    &kp N6    &kp MINUS   &kp EQUAL	            &kp LEFT        &kp DOWN    &kp UP     &kp RIGHT &kp SQT 
-		&kp N1    &kp N2 	&kp N3    &kp DOT     &kp GRAVE 	        &kp HOME        &kp PG_DN   &kp PG_UP  &kp END   &kp DQT 
-					                  &kp LGUI    &mo 1         		&mo 3           &kp DEL    
-		>;
-		};
-		
-		right_layer {
-		bindings = <
-		&kp AMPS  &kp KMLT      &kp BSLH    &kp LPRN    &kp RPRN    	&trans      &trans    &trans     &trans     &trans 
-		&kp DLLR  &kp PRCT      &kp CRRT    &kp LBKT    &kp RBKT 		&mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT   &kp BKSP
-		&kp BANG  &kp ATSN      &kp HASH    &kp LBRC    &kp RBRC    	&mwh SCROLL_LEFT &mwh SCROLL_DOWN  &mwh SCROLL_UP     &mwh SCROLL_RIGHT     &trans
-					                        &mkp LCLK   &mkp RCLK  		&mkp LCLK   &mkp RCLK
-		>;
-		};	
-		
-		tri_layer {
-		bindings = <
-		&kp F1      &kp F2      &kp F3      &kp F4      &kp F5 		    &trans   &trans     &trans        &trans      &trans
-		&kp F6      &kp F7      &kp F8      &kp F9      &kp F10  		&trans   &kp PG_UP  &kp K_VOL_UP  &kp K_MUTE  &trans 
-		&bt BT_CLR  &bt BT_NXT  &bt BT_PRV  &kp F11     &kp F12   		&trans   &kp PG_DN  &kp K_VOL_DN  &trans      &trans   
-					                        &trans      &trans  		&trans   &trans 
-		>;
-		};	
+			mouse{
+				&trans    &trans    &trans    &trans      &trans    	&trans      &trans    &trans     &trans     &trans 
+				&trans    &trans    &trans    &trans      &trans 		&mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT   &kp BKSP
+				&kp LC(Z)    &kp LC(X)    &kp LC(C)    &trans      &kp LC(V)   		&mwh SCROLL_LEFT &mwh SCROLL_DOWN  &mwh SCROLL_UP     &mwh SCROLL_RIGHT     &trans
+											  &mkp LCLK   &mkp RCLK  	&mkp LCLK   &mkp RCLK
+			};
+			arrow_nav{
+				bindings = <
+				&trans    &trans    &trans    &trans      &trans		        &kp PSCRN		&kp C_VOL_UP &kp C_VOL_DN     &kp C_MUTE    &trans 
+				&trans    &trans    &trans    &trans      &trans	            &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT &kp SQT 
+				&trans    &trans 	&trans    &trans      &trans 	        	&kp HOME        &kp PG_DN    &kp PG_UP  &kp END   &kp DQT 
+											  &kp ESC     &kp SPC         		&kp DEL         &kp DEL 
+				>;
+			};
+
+
+
+			num{
+				bindings = <
+				&kp N7    &kp N8    &kp N9    &kp N0      &kp PLUS		        &trans			&trans      &trans     &trans    &trans 
+				&kp N4    &kp N5    &kp N6    &kp MINUS   &kp EQUAL	            &kp LEFT        &kp DOWN    &kp UP     &kp RIGHT &kp SQT 
+				&kp N1    &kp N2 	&kp N3    &kp DOT     &kp GRAVE 	        &kp HOME        &kp PG_DN   &kp PG_UP  &kp END   &kp DQT 
+											  &kp ESC    &mo 1         		&mo 3           &kp DEL 
+				>;
+			};
+			sym{
+				bindings = <
+				&kp AMPS  &kp KMLT      &kp BSLH    &kp LPRN    &kp RPRN    	&trans      &trans    &trans     &trans     &trans 
+				&kp DLLR  &kp PRCT      &kp CRRT    &kp LBKT    &kp RBKT 		&mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT   &kp BKSP
+				&kp BANG  &kp ATSN      &kp HASH    &kp LBRC    &kp RBRC    	&mwh SCROLL_LEFT &mwh SCROLL_DOWN  &mwh SCROLL_UP     &mwh SCROLL_RIGHT     &trans
+													&mkp ESC   &mkp RCLK  		&mkp LCLK   &kp DEL
+				>;
+
+			};
+
         
 	};
 };
