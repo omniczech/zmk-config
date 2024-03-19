@@ -51,10 +51,12 @@
 			};
 
 			mouse{
+				bindings = <
 				&trans    &trans    &trans    &trans      &trans    	&trans      &trans    &trans     &trans     &trans 
 				&trans    &trans    &trans    &trans      &trans 		&mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT   &kp BKSP
 				&kp LC(Z)    &kp LC(X)    &kp LC(C)    &trans      &kp LC(V)   		&mwh SCROLL_LEFT &mwh SCROLL_DOWN  &mwh SCROLL_UP     &mwh SCROLL_RIGHT     &trans
 											  &mkp LCLK   &mkp RCLK  	&mkp LCLK   &mkp RCLK
+				>;
 			};
 			arrow_nav{
 				bindings = <
