@@ -60,7 +60,7 @@
 			};
 			arrow_nav{
 				bindings = <
-				&trans    &trans    &trans    &trans      &trans		        &kp PSCRN		&kp C_VOL_UP &kp C_VOL_DN     &kp C_MUTE    &trans 
+				&bt BT_CLR    &bt BT_NXT    &bt BT_PRV    &trans      &trans		        &kp PSCRN		&kp C_VOL_UP &kp C_VOL_DN     &kp C_MUTE    &trans 
 				&trans    &trans    &trans    &trans      &trans	            &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT &kp SQT 
 				&trans    &trans 	&trans    &trans      &trans 	        	&kp HOME        &kp PG_DN    &kp PG_UP  &kp END   &kp DQT 
 											  &kp ESC     &kp SPC         		&kp DEL         &kp DEL 
@@ -79,9 +79,9 @@
 			};
 			sym{
 				bindings = <
-				&kp AMPS  &kp KMLT      &kp BSLH    &kp LPRN    &kp RPRN    	&trans      &trans    &trans     &trans     &trans 
-				&kp DLLR  &kp PRCT      &kp CRRT    &kp LBKT    &kp RBKT 		&mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT   &kp BKSP
-				&kp BANG  &kp ATSN      &kp HASH    &kp LBRC    &kp RBRC    	&mwh SCROLL_LEFT &mwh SCROLL_DOWN  &mwh SCROLL_UP     &mwh SCROLL_RIGHT     &trans
+				&kp AMPS  &kp KMLT      &kp BSLH    &kp LPRN    &kp RPRN    	&trans      &trans    			&trans     		   &trans     &trans 
+				&kp DLLR  &kp PRCT      &kp CRRT    &kp LBKT    &kp RBKT 		&trans   	&mmv MOVE_DOWN 	&mmv MOVE_UP   	   &mmv MOVE_RIGHT   &kp BKSP
+				&kp BANG  &kp ATSN      &kp HASH    &kp LBRC    &kp RBRC    	&trans 		&mwh SCROLL_DOWN   &mwh SCROLL_UP     &mwh SCROLL_RIGHT     &trans
 													&mkp ESC   &mkp RCLK  		&mkp LCLK   &kp DEL
 				>;
 
